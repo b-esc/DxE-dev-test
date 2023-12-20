@@ -6,6 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+
+# Files from home directory
+.bash_logout
+.bashrc
+.cloud-locale-test.skip
+.profile
+.sudo_as_admin_successful
+.viminfo
+
 # Distribution / packaging
 .Python
 build/
