@@ -12,23 +12,23 @@
             <input id="key" name="key" type="text" required>
             <label for="value">Value:</label>
             <input id="value" name="value" type="text" required>
-            <button onclick="" type="button"></button>
-            <button onclick="" type="button"></button>
-            <button onclick="" type="button"></button>
-            <button onclick="" type="button"></button>
-            <button onclick="" type="button"></button>
+            <button onclick="setKey()" type="button">Set key and value</button>
+            <button onclick="requestKey()" type="button">Request key and value</button>
+            <button onclick="requestAllCurrentContents()" type="button">Request all current contents</button>
+            <button onclick="deleteKey()" type="button">Delete key and value</button>
+            <button onclick="clearAllCurrentContents()" type="button">Clear all current contents</button>
         </form>
     <h1>File upload server</h1>
 <!--https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean-->
         <form id="fileUploadServer" enctype="multipart/form-data">
             <label for="file">File:</label>
             <input id="file" name="file" type="file" required>
-            <button onclick="" type="button"></button>
-            <button onclick="" type="button"></button>
+            <button onclick="uploadFile()" type="button">Upload file</button>
+            <button onclick="requestUploadedFiles()" type="button">Request uploaded files</button>
 <!--https://www.w3schools.com/tags/tag_select.asp-->
             <label for="fileDownload">Download File:</label>
             <select name="fileDownload" id="fileDownload"></select>
-            <button onclick="" type="button"></button>
+            <button onclick="requestFileForDownload()" type="button">Request file for download</button>
         </form>
 
     <script src="index.js"></script>
