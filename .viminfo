@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1703028322,,"wq"
+|2,0,1703048809,,"wq"
 
 # Search String History (newest to oldest):
 
@@ -25,16 +25,52 @@
 # Registers:
 
 # File marks:
-'0  4  39  ~/private_memory.sh
-|4,48,4,39,1703028322,"~/private_memory.sh"
+'0  12  6  ~/.gitignore
+|4,48,12,6,1703048809,"~/.gitignore"
+'1  161  6  ~/.gitignore
+|4,49,161,6,1703048731,"~/.gitignore"
+'2  160  6  ~/.gitignore
+|4,50,160,6,1703048731,"~/.gitignore"
+'3  4  39  ~/private_memory.sh
+|4,51,4,39,1703028322,"~/private_memory.sh"
 
 # Jumplist (newest first):
+-'  12  6  ~/.gitignore
+|4,39,12,6,1703048809,"~/.gitignore"
+-'  161  6  ~/.gitignore
+|4,39,161,6,1703048788,"~/.gitignore"
+-'  160  6  ~/.gitignore
+|4,39,160,6,1703048731,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1703048726,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1703048726,"~/.gitignore"
+-'  4  39  ~/private_memory.sh
+|4,39,4,39,1703028322,"~/private_memory.sh"
+-'  4  39  ~/private_memory.sh
+|4,39,4,39,1703028322,"~/private_memory.sh"
+-'  4  39  ~/private_memory.sh
+|4,39,4,39,1703028322,"~/private_memory.sh"
 -'  4  39  ~/private_memory.sh
 |4,39,4,39,1703028322,"~/private_memory.sh"
 -'  1  0  ~/private_memory.sh
 |4,39,1,0,1703028259,"~/private_memory.sh"
+-'  1  0  ~/private_memory.sh
+|4,39,1,0,1703028259,"~/private_memory.sh"
+-'  1  0  ~/private_memory.sh
+|4,39,1,0,1703028259,"~/private_memory.sh"
+-'  1  0  ~/private_memory.sh
+|4,39,1,0,1703028259,"~/private_memory.sh"
 
 # History of marks within files (newest to oldest):
+
+> ~/.gitignore
+	*	1703048808	0
+	"	12	6
+	^	12	7
+	.	13	0
+	+	161	0
+	+	13	0
 
 > ~/private_memory.sh
 	*	1703028320	0
