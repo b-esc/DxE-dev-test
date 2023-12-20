@@ -6,6 +6,7 @@ __pycache__/
 # C extensions
 *.so
 
+# Works cited: [200~https://github.com/github/gitignore/blob/main/Python.gitignore
 
 # Files from home directory
 .bash_logout
