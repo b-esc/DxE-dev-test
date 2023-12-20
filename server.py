@@ -93,4 +93,4 @@ def request_file_for_download(file):
 
 # https://pythonhow.com/python-tutorial/flask/How-a-Flask-app-works/
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True, host='0.0.0.0')
