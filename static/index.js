@@ -9,7 +9,7 @@ async function setKey() {
         },
         body: JSON.stringify({key, value})
     });
-    const responseJson = res.json()
+    const responseJson = await res.json()
     console.log(responseJson)
 }
 
@@ -22,7 +22,7 @@ async function requestKey() {
         },
         body: JSON.stringify({key})
     });
-    const responseJson = res.json()
+    const responseJson = await res.json()
     console.log(responseJson)
 }
 
@@ -30,7 +30,7 @@ async function requestAllCurrentContents() {
     const res = await fetch('/request_all_current_contents', {
         method: 'POST',
     })
-    const responseJson = res.json()
+    const responseJson = await res.json()
     console.log(responseJson)
 }
 
@@ -43,7 +43,7 @@ async function deleteKey() {
         },
         body: JSON.stringify({key})
     });
-    const responseJson = res.json()
+    const responseJson = await res.json()
     console.log(responseJson)
 }
 
@@ -51,7 +51,7 @@ async function clearAllCurrentContents() {
     const res = await fetch('/clear_all_current_contents', {
         method: 'POST',
     })
-    const responseJson = res.json()
+    const responseJson = await res.json()
     console.log(responseJson)
 }
 
@@ -79,7 +79,7 @@ async function requestUploadedFiles() {
     const fileDownloadSelectTag = document.getElementById('fileDownload');
     fileDownloadSelectTag.innerHTML = '';
 
-    resultJson.files.forEach(f => {
+    resultJson['uploaded_files'].forEach(f => {
         const optionTag = document.createElement('option');
         optionTag.value = f;
         optionTag.textContent = f;

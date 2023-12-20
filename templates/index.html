@@ -30,7 +30,7 @@
             <select name="fileDownload" id="fileDownload"></select>
             <button onclick="requestFileForDownload()" type="button">Request file for download</button>
         </form>
-
-    <script src="index.js"></script>
+<!--https://stackoverflow.com/questions/30011170/flask-application-how-to-link-a-javascript-file-to-website-->
+    <script src="{{url_for('static', filename='index.js')}}"></script>
 </body>
 </html>

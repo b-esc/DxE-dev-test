@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, jsonify
+import os
+from flask import send_from_directory, Flask, render_template, request, jsonify
 
 # https://flask.palletsprojects.com/en/3.0.x/quickstart/#variable-rules
 
@@ -69,7 +70,7 @@ def upload_file():
 
     file_upload = request.files['file']
 
-    if file.filename == '':
+    if file_upload.filename == '':
         return no_file_response, 400
 
     file_destination = os.path.join(UPLOAD_FOLDER, file_upload.filename)
@@ -85,7 +86,7 @@ def request_uploaded_files():
     response = jsonify({'uploaded_files': filenames})
     return response
 
-@app.route('request_file_for_download/<file>', methods=['GET'])
+@app.route('/request_file_for_download/<file>', methods=['GET'])
 def request_file_for_download(file):
     downloaded_file = send_from_directory(UPLOAD_FOLDER, file)
     return downloaded_file
