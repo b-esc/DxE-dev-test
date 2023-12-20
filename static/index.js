@@ -9,8 +9,9 @@ async function setKey() {
         },
         body: JSON.stringify({key, value})
     });
-    const responseJson = await res.json()
-    console.log(responseJson)
+    const responseJson = await res.json();
+    console.log(responseJson);
+    alert(JSON.stringify(responseJson));
 }
 
 async function requestKey() {
@@ -22,16 +23,18 @@ async function requestKey() {
         },
         body: JSON.stringify({key})
     });
-    const responseJson = await res.json()
-    console.log(responseJson)
+    const responseJson = await res.json();
+    console.log(responseJson);
+    alert(JSON.stringify(responseJson));
 }
 
 async function requestAllCurrentContents() {
     const res = await fetch('/request_all_current_contents', {
         method: 'POST',
     })
-    const responseJson = await res.json()
-    console.log(responseJson)
+    const responseJson = await res.json();
+    console.log(responseJson);
+    alert(JSON.stringify(responseJson));
 }
 
 async function deleteKey() {
@@ -44,15 +47,17 @@ async function deleteKey() {
         body: JSON.stringify({key})
     });
     const responseJson = await res.json()
-    console.log(responseJson)
+    console.log(responseJson);
+    alert(JSON.stringify(responseJson));
 }
 
 async function clearAllCurrentContents() {
     const res = await fetch('/clear_all_current_contents', {
         method: 'POST',
     })
-    const responseJson = await res.json()
-    console.log(responseJson)
+    const responseJson = await res.json();
+    console.log(responseJson);
+    alert(JSON.stringify(responseJson));
 }
 
 async function uploadFile() {
@@ -67,6 +72,7 @@ async function uploadFile() {
     })
     const resultJson = await res.json();
     console.log(resultJson);
+    alert(JSON.stringify(resultJson));
 }
 
 async function requestUploadedFiles() {
@@ -94,12 +100,10 @@ function downloadFileToBrowserXMLHttp(fileName){
     xmlRq.open('GET', `/request_file_for_download/${fileName}`, true);
     xmlRq.responseType = 'arraybuffer';
     xmlRq.onload = function () {
-        console.log(xmlRq, 'xmlRq');
         if (xmlRq.status !== 200){
             console.error(`Download request failure ${xmlRq.statusText}`);
         }
         if (xmlRq.status === 200){
-            console.log(xmlRq.getResponseHeader('Content-Type'), 'content type!!');
             const blob = new Blob(
                 [xmlRq.response],
                 {type: xmlRq.getResponseHeader('Content-Type')});
