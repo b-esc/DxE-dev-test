@@ -87,7 +87,35 @@ async function requestUploadedFiles() {
     });
 }
 
+// https://stackoverflow.com/questions/71992707/downloading-image-in-javascript-creates-corrupted-file
+// https://stackoverflow.com/questions/20287600/ajax-response-gives-a-corrupted-compressed-tgz-file/20545165#20545165
+function downloadFileToBrowserXMLHttp(fileName){
+    const xmlRq = new XMLHttpRequest();
+    xmlRq.open('GET', `/request_file_for_download/${fileName}`, true);
+    xmlRq.responseType = 'arraybuffer';
+    xmlRq.onload = function () {
+        console.log(xmlRq, 'xmlRq');
+        if (xmlRq.status !== 200){
+            console.error(`Download request failure ${xmlRq.statusText}`);
+        }
+        if (xmlRq.status === 200){
+            console.log(xmlRq.getResponseHeader('Content-Type'), 'content type!!');
+            const blob = new Blob(
+                [xmlRq.response],
+                {type: xmlRq.getResponseHeader('Content-Type')});
+            const url = URL.createObjectURL(blob);
+            const atag = document.createElement('a');
+            atag.href = url;
+            atag.download = fileName;
+            document.body.appendChild(atag);
+            atag.click();
+            document.body.removeChild(atag);
+            URL.revokeObjectURL(url);
+        }
+    }
+    xmlRq.send()
+}
 async function requestFileForDownload() {
-    const file = document.getElementById('fileDownload').value;
-    window.location.href = `/request_file_for_download/${file}`;
+    const fileName = document.getElementById('fileDownload').value;
+    downloadFileToBrowserXMLHttp(fileName);
 }
