@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DxE: Basic dev test</title>
 </head>
 <body>
+<!--https://pythonbasics.org/flask-http-methods/-->
+    <h1>Key-value Server</h1>
+        <form id="keyValueServer">
+            <label for="key">Key:</label>
+            <input id="key" name="key" type="text" required>
+            <label for="value">Value:</label>
+            <input id="value" name="value" type="text" required>
+            <button onclick="" type="button"></button>
+            <button onclick="" type="button"></button>
+            <button onclick="" type="button"></button>
+            <button onclick="" type="button"></button>
+            <button onclick="" type="button"></button>
+        </form>
+    <h1>File upload server</h1>
+<!--https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean-->
+        <form id="fileUploadServer" enctype="multipart/form-data">
+            <label for="file">File:</label>
+            <input id="file" name="file" type="file" required>
+            <button onclick="" type="button"></button>
+            <button onclick="" type="button"></button>
+<!--https://www.w3schools.com/tags/tag_select.asp-->
+            <label for="fileDownload">Download File:</label>
+            <select name="fileDownload" id="fileDownload"></select>
+            <button onclick="" type="button"></button>
+        </form>
 
+    <script src="index.js"></script>
 </body>
 </html>
