@@ -17,6 +17,11 @@ __pycache__/
 .viminfo
 uploaded_files/*
 .lesshst
+cert.pem
+key.pem
+memories/
+private_memory.sh
+.bash_history
 
 # Distribution / packaging
 .Python

@@ -1,6 +1,5 @@
 import os
 from flask import send_from_directory, Flask, render_template, request, jsonify
-
 # https://flask.palletsprojects.com/en/3.0.x/quickstart/#variable-rules
 
 app = Flask(__name__)
@@ -93,4 +92,4 @@ def request_file_for_download(file):
 
 # https://pythonhow.com/python-tutorial/flask/How-a-Flask-app-works/
 if __name__ == '__main__':
-    app.run(debug = True, host='0.0.0.0')
+    app.run(debug = True, host='0.0.0.0',ssl_context=("cert.pem", "key.pem"))
