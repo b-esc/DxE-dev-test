@@ -3,7 +3,6 @@ from flask import send_from_directory, Flask, render_template, request, jsonify
 # https://flask.palletsprojects.com/en/3.0.x/quickstart/#variable-rules
 
 app = Flask(__name__)
-
 storage = {}
 
 # https://flask.palletsprojects.com/en/3.0.x/quickstart/#routing
@@ -93,4 +92,4 @@ def request_file_for_download(file):
 # https://pythonhow.com/python-tutorial/flask/How-a-Flask-app-works/
 # https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https
 if __name__ == '__main__':
-    app.run(debug = True, host='0.0.0.0',ssl_context=("cert.pem", "key.pem"))
+    app.run(debug = False, host='0.0.0.0')# ,ssl_context=('/etc/letsencrypt/live/bescobardxedevtest.ddns.net/fullchain.pem','/etc/letsencrypt/live/bescobardxedevtest.ddns.net/privkey.pem')
